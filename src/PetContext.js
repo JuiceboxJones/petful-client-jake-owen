@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
 const PetContext = React.createContext({
-	catQueue: [],
-	dogQueue: [],
+	cats: [],
+	dogs: [],
+	users: [],
 	setCats: () => {},
 	setDogs: () => {},
 	setUsers: () => {}
@@ -30,9 +31,9 @@ export class PetProvider extends Component {
 			cats: this.state.cats,
 			dogs: this.state.dogs,
 			users: this.state.users,
-			setCats: this.state.setCats,
-			setDogs: this.state.setDogs,
-			setUsers: this.state.setUsers
+			setCats: this.setCats,
+			setDogs: this.setDogs,
+			setUsers: this.setUsers
 		};
 		return (
 			<PetContext.Provider value={value}>

@@ -18,7 +18,7 @@ export default class AdoptionPage extends Component {
 			.catch(this.context.setError);
 	}
 
-	renderFoods() {
+	renderPets() {
 		const { cats = null, dogs = null, users = null } = this.context;
 
 		return !cats || !dogs || !users ? (
@@ -36,11 +36,11 @@ export default class AdoptionPage extends Component {
 	render() {
 		const { error } = this.context;
 		return (
-			<section list className="FoodList">
+			<section className="Pets">
 				{error ? (
 					<p className="red">There was an error, try again</p>
 				) : (
-					this.renderFoods()
+					this.renderPets()
 				)}
 			</section>
 		);

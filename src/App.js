@@ -3,9 +3,10 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import AdoptionPage from "./AdoptionPage";
 import "./App.css";
+import PetContext from "./PetContext";
 
 class App extends Component {
-	componentDidMount() {}
+	static contextType = PetContext;
 	render() {
 		return (
 			<div className="App">
