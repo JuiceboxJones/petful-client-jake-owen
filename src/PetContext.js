@@ -51,7 +51,10 @@ export class PetProvider extends Component {
 			users: this.state.users,
 			setCats: this.setCats,
 			setDogs: this.setDogs,
-			setUsers: this.setUsers
+			setUsers: this.setUsers,
+			dequeueCat: this.dequeueCat,
+			dequeueDog: this.dequeueDog,
+			dequeueUser: this.dequeueUser
 		};
 		return (
 			<PetContext.Provider value={value}>

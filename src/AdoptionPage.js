@@ -20,6 +20,9 @@ export default class AdoptionPage extends Component {
 
 	handleAdoptCat() {
 		PetService.adoptCat().then(this.context.dequeueCat);
+		if (this.context.cats[0].adopter) {
+			this.handleAdoptCat();
+		}
 	}
 
 	handleAdoptDog() {
@@ -35,12 +38,17 @@ export default class AdoptionPage extends Component {
 			</section>
 		) : (
 			<section className="adoptable-pets">
-				<button className="adopt" onClick={this.handleAdopt} />
+				<button className="adopt" onClick={this.handleAdoptCat}>
+					Adopt
+				</button>
 				<ul className="cats">
 					{cats.map(cat => (
 						<Pet pet={cat} />
 					))}
 				</ul>
+				<button className="adopt" onClick={this.handleAdoptDog}>
+					Adopt
+				</button>
 				<ul className="dogs">
 					{dogs.map(dog => (
 						<Pet pet={dog} />

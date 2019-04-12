@@ -11,6 +11,7 @@ export default class Pet extends Component {
 				<section className="breed">{pet.breed}</section>
 				<section className="story">{pet.story}</section>
 				<section className="age">{pet.age}</section>
+				<section className="adopter">{pet.adopter}</section>
 			</li>
 		);
 	}
