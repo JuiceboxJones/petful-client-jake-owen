@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PetContext from "./PetContext";
 import PetService from "./PetService";
+import Pet from "./Pet";
 
 export default class AdoptionPage extends Component {
 	static contextType = PetContext;
 
 	componentDidMount() {
-		// this.context.clearError();
 		PetService.getCats()
 			.then(this.context.setCats)
 			.catch(this.context.setError);
@@ -18,6 +18,14 @@ export default class AdoptionPage extends Component {
 			.catch(this.context.setError);
 	}
 
+	handleAdoptCat() {
+		PetService.adoptCat().then(this.context.dequeueCat);
+	}
+
+	handleAdoptDog() {
+		return null;
+	}
+
 	renderPets() {
 		const { cats = null, dogs = null, users = null } = this.context;
 
@@ -27,8 +35,17 @@ export default class AdoptionPage extends Component {
 			</section>
 		) : (
 			<section className="adoptable-pets">
-				<section className="cats">{"// display from cats queue"}</section>
-				<section className="dogs">{"//display dogs queue"}</section>
+				<button className="adopt" onClick={this.handleAdopt} />
+				<ul className="cats">
+					{cats.map(cat => (
+						<Pet pet={cat} />
+					))}
+				</ul>
+				<ul className="dogs">
+					{dogs.map(dog => (
+						<Pet pet={dog} />
+					))}
+				</ul>
 			</section>
 		);
 	}

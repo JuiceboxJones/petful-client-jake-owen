@@ -6,7 +6,10 @@ const PetContext = React.createContext({
 	users: [],
 	setCats: () => {},
 	setDogs: () => {},
-	setUsers: () => {}
+	setUsers: () => {},
+	dequeueCat: () => {},
+	dequeueDog: () => {},
+	dequeueUser: () => {}
 });
 export default PetContext;
 
@@ -24,6 +27,21 @@ export class PetProvider extends Component {
 		this.setState({ dogs });
 	};
 	setUsers = users => {
+		this.setState({ users });
+	};
+	dequeueCat = () => {
+		let cats = [...this.state.cats];
+		cats.splice(0, 1);
+		this.setState({ cats });
+	};
+	dequeueDog = () => {
+		let dogs = [...this.state.dogs];
+		dogs.splice(0, 1);
+		this.setState({ dogs });
+	};
+	dequeueUser = () => {
+		let users = [...this.state.users];
+		users.splice(0, 1);
 		this.setState({ users });
 	};
 	render() {
