@@ -6,21 +6,23 @@
 
 ### Client:
 
-[client][deployed link]
-[github][https://github.com/thinkful-ei-armadillo/petful-client-jake-owen]
+- deployed link
+
+- https://github.com/thinkful-ei-armadillo/petful-client-jake-owen
 
 ### Server:
 
-[server][deployed link]
-[github][https://github.com/thinkful-ei-armadillo/petful-server-jake-owen]
+- deployed link
+
+- https://github.com/thinkful-ei-armadillo/petful-server-jake-owen
 
 ## Tech Stack
 
 ### Client:
 
-React
-ZEIT Now
+- React
+- ZEIT Now
 
-###Server:
-Node.js
-Express
+### Server:
+- Node.js
+- Express
