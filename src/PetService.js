@@ -9,7 +9,7 @@ const PetService = {
 	adoptCat() {
 		return fetch(`${config.API_ENDPOINT}/cat`, {
 			method: "DELETE"
-		});
+		}).then(this.getCats)
 	},
 	getDogs() {
 		return fetch(`${config.API_ENDPOINT}/dog`).then(res =>
@@ -19,9 +19,7 @@ const PetService = {
 	adoptDog() {
 		return fetch(`${config.API_ENDPOINT}/dog`, {
 			method: "DELETE"
-		}).then(res =>
-			!res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-		);
+		}).then(this.getDogs)
 	},
 	getUsers() {
 		return fetch(`${config.API_ENDPOINT}/user`).then(res =>

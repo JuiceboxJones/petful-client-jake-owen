@@ -6,6 +6,21 @@ ul {
 	list-style: none;
 }
 
+.cats {
+
+  flex: 50%;
+}
+
+.dogs {
+
+  flex: 50%;
+}
+
+.adoptable-pets{
+  display: flex;
+}
+
+
 .App-logo {
 	animation: App-logo-spin infinite 20s linear;
 	height: 40vmin;

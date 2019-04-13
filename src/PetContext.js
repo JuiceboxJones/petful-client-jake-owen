@@ -15,13 +15,14 @@ export default PetContext;
 
 export class PetProvider extends Component {
 	state = {
-		cats: null,
-		dogs: null,
+		cats: [],
+		dogs: [],
 		users: null,
 		error: null
 	};
 	setCats = cats => {
-		this.setState({ cats });
+    this.setState({ cats });
+    
 	};
 	setDogs = dogs => {
 		this.setState({ dogs });
