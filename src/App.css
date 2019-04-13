@@ -1,33 +1,39 @@
+body {
+	box-sizing: border-box;
+}
+
 .App {
 	text-align: center;
+}
+
+header {
+	font-size: 22pt;
 }
 
 ul {
 	list-style: none;
 }
 
-.cats {
+.statement {
+	margin: auto;
+	text-align: left;
+	width: 400px;
+	padding: 20px;
+}
 
-  flex: 50%;
+.adoptable-pets {
+	display: flex;
+}
+
+.cats {
+	flex: 50%;
 }
 
 .dogs {
-
-  flex: 50%;
+	flex: 50%;
 }
 
-.adoptable-pets{
-  display: flex;
-}
-
-
-.App-logo {
-	animation: App-logo-spin infinite 20s linear;
-	height: 40vmin;
-	pointer-events: none;
-}
-
-.App-header {
+/* .App-header {
 	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
@@ -36,17 +42,8 @@ ul {
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
-}
+} */
 
 .App-link {
 	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
 }

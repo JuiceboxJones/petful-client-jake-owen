@@ -19,18 +19,11 @@ export default class AdoptionPage extends Component {
 	}
 
 	handleAdoptCat(e) {
-    PetService.adoptCat().then(this.context.setCats);
-		// if (this.context.cats[0].adopter) {
-		// 	this.handleAdoptCat();
-		// }
+		PetService.adoptCat().then(this.context.setCats);
 	}
 
 	handleAdoptDog(e) {
 		PetService.adoptDog().then(this.context.setDogs);
-		// if (this.context.dogs[0].adopter) {
-    //   console.log('dequeue')
-		// 	this.handleAdoptDog(e);
-		// }
 	}
 
 	renderPets() {
@@ -42,20 +35,19 @@ export default class AdoptionPage extends Component {
 			</section>
 		) : (
 			<section className="adoptable-pets">
-				
 				<ul className="cats">
-        <button className="adopt" onClick={(e) => this.handleAdoptCat(e)}>
-					Adopt a Cat
-				</button>
+					<button className="adopt" onClick={e => this.handleAdoptCat(e)}>
+						Adopt a Cat
+					</button>
 					{cats.map(cat => (
 						<Pet pet={cat} />
 					))}
 				</ul>
 
 				<ul className="dogs">
-        <button className="adopt" onClick={(e) => this.handleAdoptDog(e)}>
-					Adopt a Dog
-				</button>
+					<button className="adopt" onClick={e => this.handleAdoptDog(e)}>
+						Adopt a Dog
+					</button>
 					{dogs.map(dog => (
 						<Pet pet={dog} />
 					))}
