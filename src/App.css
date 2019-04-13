@@ -27,6 +27,26 @@ ul {
 
 .cats {
 	flex: 50%;
+li{
+  list-style: none;
+}
+
+img {
+margin: 6px;
+}
+
+.adopted img{
+  margin-top: 25px;
+}
+
+.adopted{
+  float: right;
+  margin-right: 25%;
+}
+
+.adoptable-pets{
+  float: left;
+  margin-left: 25%;
 }
 
 .dogs {

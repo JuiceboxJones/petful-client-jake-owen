@@ -10,7 +10,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header>Pet Adoption Central</header>
+				<header><h1>Pet Adoption Central</h1></header>
 				<main className="main">
 					<Switch className="application">
 						<Route exact path="/" component={LandingPage} />
