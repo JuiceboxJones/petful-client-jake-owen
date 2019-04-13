@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 
-export default class Pet extends Component {
-	render() {
-    const { pet } = this.props;
+export default class Adopted extends Component {
 
+	render() {
+    const { pet, user } = this.props;
+    const randomize =() => {
+      if(!user){
+        return;
+      }
+      let username = user[Math.floor(Math.random()*user.length)].name
+      console.log(username)
+      return username;
+    }
 		return !pet ? (
 			<section className="pet-item">
-				<span className="status-text">{"No pets to display"}</span>
+				<span className="status-text">{''}</span>
 			</section>
 		) : (
 			<li className="pet">
@@ -16,7 +24,7 @@ export default class Pet extends Component {
 				<section className="breed">Breed: {pet.breed}</section>
 				<section className="story">My story: {pet.story}</section>
 				<section className="age">Age: {pet.age}</section>
-				<section className="adopter">{pet.adopter}</section>
+				<section className="adopter">Adopted by: {randomize()}</section>
 			</li>
 		);
 	}
