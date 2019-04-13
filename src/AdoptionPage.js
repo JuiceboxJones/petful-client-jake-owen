@@ -64,8 +64,9 @@ export default class AdoptionPage extends Component {
 				<span className="status-text">{"Loading from server..."}</span>
 			</section>
 		) : (
+      <section className='display-container'>
 			<section className="adoptable-pets">
-				
+      <h2>Up For Adoption</h2>
 				<ul className="cats">
         <button className="adopt" onClick={(e) => this.handleAdoptCat(e)}>
 					Adopt a Cat
@@ -83,6 +84,7 @@ export default class AdoptionPage extends Component {
             ))} */}
 						<Pet pet={dogs[0]} />
 				</ul>
+        </section>
         <section className='adopted'>
         <h2>Adopted Pets</h2>
         <Adopted pet={adoptedDog} user={users} />

@@ -6,19 +6,27 @@ ul {
 	list-style: none;
 }
 
-/* .cats {
-
-  flex: 50%;
+li{
+  list-style: none;
 }
 
-.dogs {
+img {
+margin: 6px;
+}
 
-  flex: 50%;
+.adopted img{
+  margin-top: 25px;
+}
+
+.adopted{
+  float: right;
+  margin-right: 25%;
 }
 
 .adoptable-pets{
-  display: flex;
-} */
+  float: left;
+  margin-left: 25%;
+}
 
 
 .App-logo {
