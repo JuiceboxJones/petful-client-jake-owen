@@ -1,4 +1,4 @@
 export default {
   REACT_APP_API_BASE: process.env.REACT_APP_API_BASE || 'http://localhost:8080/api',
-  API_ENDPOINT: process.env.REACT_APP_API_BASE
+  API_ENDPOINT: 'https://jo-petful.herokuapp.com/api'
   }
