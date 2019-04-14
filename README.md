@@ -12,7 +12,7 @@
 
 ### Server:
 
-- deployed link
+- deployed link: https://jo-petful.herokuapp.com
 
 - https://github.com/thinkful-ei-armadillo/petful-server-jake-owen
 
