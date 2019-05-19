@@ -11,7 +11,7 @@ You as the user, assume many identities to simultate multiple users adopting ani
 
 ### Client:
 
-- deployed link
+- deployed link: https://jo-petful-krqcfjf5e.now.sh
 
 - https://github.com/thinkful-ei-armadillo/petful-client-jake-owen
 
